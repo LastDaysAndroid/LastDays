@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<litepal>
+    <!--    数据库名称-->
+    <dbname value="LastDays" ></dbname>
+    <!--数据库版本号-->
+    <version value="1" ></version>
+    <!--实体类映射的列表-->
+    <list>
+        <mapping class="com.sd.lastdays.beans.countdownDayBeans.DateContent"></mapping>
+        <mapping class="com.sd.lastdays.beans.mineBeans.Person"></mapping>
+        <mapping class="com.sd.lastdays.beans.booksBeans.Book"></mapping>
+    </list>
+</litepal>

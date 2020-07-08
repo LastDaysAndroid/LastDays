@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".otherActivity.countdownDayActivity.AddContentActivity"
+    android:orientation="vertical"
+    android:background="#ffffff">
+<!--添加倒数日内容-->
+
+    <EditText
+        android:id="@+id/add_title"
+        android:layout_width="match_parent"
+        android:layout_height="92dp"
+        android:drawableLeft="@mipmap/order_unread"
+        tools:layout_editor_absoluteX="0dp"
+        tools:layout_editor_absoluteY="5dp"
+        android:hint="新增事件的标题">
+
+    </EditText>
+
+    <TextView
+        android:drawableLeft="@mipmap/renew"
+        android:id="@+id/textView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="目标日(未来的日期为倒数，过去的日期为正数)"
+        android:textSize="19dp"
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteX="0dp"
+        tools:layout_editor_absoluteY="282dp" />
+
+    <DatePicker
+        android:id="@+id/dataPicker"
+        android:theme="@android:style/Theme.Holo.Light.NoActionBar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:calendarViewShown="false">
+    </DatePicker>
+    <Button
+        android:id="@+id/select_button"
+        android:text="倒数本选择"
+        android:onClick="showSingleAlertDialog"
+        android:layout_below="@+id/dataPicker"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        tools:ignore="OnClick" />
+
+    <Button
+        android:id="@+id/save_button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/select_button"
+        android:layout_centerHorizontal="true"
+        android:layout_gravity="center"
+        android:text="保存" />
+</LinearLayout>

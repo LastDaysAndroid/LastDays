@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    >
+<!--group表示一个组，single表示组中的项只能单选-->
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_call"
+            android:icon="@mipmap/index2"
+            android:title="首页事件" />
+        <item
+            android:id="@+id/nav_friends"
+            android:icon="@mipmap/rili"
+            android:title="全部" />
+        <item
+            android:id="@+id/nav_mail"
+            android:icon="@mipmap/daoshu"
+            android:title="倒数本" />
+        <item
+            android:id="@+id/nav_location"
+            android:icon="@mipmap/zhuan"
+            android:title="历史上的今天" />
+        <item
+            android:id="@+id/nav_task"
+            android:icon="@mipmap/mine"
+            android:title="我的倒数日" />
+        <item
+            android:id="@+id/select_image"
+            android:icon="@mipmap/tabbar_settings_default"
+            android:title="设置头像" />
+    </group>
+</menu>

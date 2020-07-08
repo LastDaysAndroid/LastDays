@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recycler"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <Button
+        android:id="@+id/add_new_book"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:background="#3CB371"
+        android:layout_gravity="center_horizontal"
+        android:text="添加新倒数本"
+        android:textSize="16dp"
+        android:layout_marginTop="10dp"
+        android:textColor="#fff" />
+</LinearLayout>

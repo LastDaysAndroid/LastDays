@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.sd.lastdays">
+
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <application
+        android:name="org.litepal.LitePalApplication"
+        android:allowBackup="true"
+        android:icon="@mipmap/e_logo"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity android:name=".otherActivity.LastDayShowActivity.AmendThingActivity"></activity>
+        <activity android:name=".otherActivity.LastDayShowActivity.ThingContentActivity" />
+        <activity android:name=".otherActivity.LastDayShowActivity.AddThingActivity" />
+
+        <meta-data
+            android:name="com.google.android.actions"
+            android:resource="@xml/button" />
+
+        <receiver
+            android:name=".boradcast.CardReceiver"
+            android:enabled="true"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="CARD" />
+            </intent-filter>
+        </receiver>
+
+        <service
+            android:name=".service.UpdateTimeService"
+            android:enabled="true"
+            android:exported="true" />
+
+        <receiver
+            android:name=".boradcast.AccountBroadcastReceiver"
+            android:enabled="true"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="ACCOUNNT_BROADCAST" />
+            </intent-filter>
+        </receiver>
+
+        <activity
+            android:name=".otherActivity.mineActivity.MineActivity"
+            android:label="我的倒数日"
+            android:launchMode="singleTask" />
+
+        <service
+            android:name=".service.AutoUpdateTimeService"
+            android:enabled="true"
+            android:exported="true" />
+
+        <activity
+            android:name=".otherActivity.countdownDayActivity.AmendContentActivity"
+            android:label="编辑事件"
+            android:launchMode="singleTask" />
+        <activity
+            android:name=".otherActivity.countdownDayActivity.AddContentActivity"
+            android:label="新增事件"
+            android:launchMode="singleTask" />
+        <activity
+            android:name=".otherActivity.countdownDayActivity.DateContentActivity"
+            android:label="Days Matter"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".otherActivity.LastDayShowActivity.EditBookActivity"
+            android:label="Days Matter * 生活"
+            android:screenOrientation="portrait"
+            tools:ignore="DuplicateActivity" />
+        <activity
+            android:name=".otherActivity.LastDayShowActivity.BookContentActivity"
+            android:label="Days Matter"
+            android:screenOrientation="portrait" />
+
+        <activity
+            android:name=".otherActivity.manageBookActivity.ManageBookActivity"
+            android:label="管理倒数本"
+            android:screenOrientation="portrait" />
+
+        <activity
+            android:name=".otherActivity.addBookActivity.AddBookActivity"
+            android:label="添加倒数本"
+            android:launchMode="singleTask"/>
+
+        <!--
+            android:label="Last Days"设置ToolBar的文字标题
+            screenOrientation="portrait"：只支持竖屏，不能多窗口
+            android:launchMode="singleTask":MainActivity只存在一个活动实例
+        -->
+        <activity
+            android:name=".MainActivity"
+            android:label="Last Days · 倒数日"
+            android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+    </application>
+
+</manifest>
